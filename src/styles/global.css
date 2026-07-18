@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+:root {
+  --color-primary: #f0f0f0;
+  --color-muted: #a0a0a0;
+  --color-bg: #0f0f0f;
+  --color-surface: #151515;
+  --color-card: #191919;
+  /* --color-surface-dark: #202020; */
+
+  --color-featured: #b8a46a;
+
+  --border-radius: 2rem;
+}
+
+/* Base */
+html,
+body {
+  scroll-behavior: smooth;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+}
+
+main,
+footer {
+  z-index: 1;
+}
+
+.section-card {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background-color: var(--color-surface);
+  padding: 4rem;
+  border-radius: var(--border-radius);
+}
+
+.btn {
+  font-weight: 400;
+  letter-spacing: 0.05em;
+
+  padding: 0.7rem 1.4rem;
+  border-radius: 999px;
+  text-decoration: none;
+  background-color: var(--color-surface);
+  color: var(--color-primary);
+  transition: transform 0.2s ease;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  transition:
+    transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1),
+    box-shadow 0.25s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  transform: translateY(0) scale(0.97);
+}

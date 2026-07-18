@@ -1,0 +1,102 @@
+<section id="about" class="about">
+  <div class="about-container">
+    <h2 class="about-title">About</h2>
+    <div class="section-card">
+      <div class="about-text">
+        <div class="about-col">
+          <p class="about-text-first">
+            I'm a 17-year-old self-taught C++ developer focused on building
+            real-time graphics.
+          </p>
+          <p>
+            Low-level and graphics programming are where I feel most at home.
+            What draws me to graphics specifically is the chance to create
+            something purely visual out of code and math, a feeling Ruby's
+            creator, Yukihiro Matsumoto, once captured well: he was no good at
+            painting or music, but he could write software. That's exactly how I
+            feel about it.
+          </p>
+          <p>
+            My core stack is C/C++, OpenGL, and GLSL, and along the way I've
+            worked with raymarching and SDF-based rendering, as well as built a
+            small render engine with support for shadows, lighting, and
+            textures.
+          </p>
+        </div>
+        <div class="about-col">
+          <p>
+            That same curiosity carries into everything else I build. I've
+            written desktop applications with Tauri, including a
+            file-encryption tool with custom encryption sequences and a
+            low-latency group chat system in C++ using Asio. I also do web
+            frontend work, mostly static sites so far.
+          </p>
+          <p>
+            I started scripting at ten, tinkering with Windows Script Host, then
+            moved on to small games and UI tools in Python before committing to
+            C++ Cnake was my first real project there.
+          </p>
+          <p class="about-text-last">
+            These days I balance studies with daily coding, and I'm open to
+            freelance work and new opportunities.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about-title {
+    display: block;
+    font-size: clamp(3rem, 5vw, 4rem);
+    font-weight: 500;
+    color: var(--color-primary);
+    margin: 0 0 2.5rem;
+  }
+
+  .about {
+    padding: 4rem;
+    max-width: 1350px;
+    margin-inline: auto;
+  }
+
+  .about-container {
+    padding-bottom: 3rem;
+  }
+
+  .about-text {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    color: var(--color-primary);
+  }
+
+  .about-col {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  @media (max-width: 1024px) {
+    .about-text {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .about-text p {
+    line-height: 1.5;
+    font-size: 1.25rem;
+    color: color-mix(in srgb, var(--color-primary) 90%, transparent);
+    margin: 0;
+  }
+
+  .about-text-first {
+    font-size: 1.75rem;
+    font-weight: 600;
+  }
+
+  .about-text-last {
+    font-weight: 600;
+  }
+</style>

@@ -1,0 +1,79 @@
+---
+import SkyglPreview from "../../assets/skygl.jpg";
+import EnginePreview from "../../assets/engine.jpg";
+import CnakePreview from "../../assets/cnake.png";
+import ProjectCard from "../ProjectCard.astro";
+---
+
+<section id="project" class="projects">
+  <div class="projects-container">
+    <span class="projects-title"> Projects </span>
+    <div class="section-card">
+      <div class="projects-scroll-container">
+        <ProjectCard
+          title="SkyGL"
+          description="Real-time procedural sky and volumetric cloud renderer."
+          image={SkyglPreview}
+          ref="https://github.com/kotivas/skygl"
+          featured={true}
+          tags={["C++", "OpenGL", "Raymarch"]}
+        />
+
+        <ProjectCard
+          title="Graphics Engine"
+          description="An experimental project used for studying OpenGL and modern rendering techniques."
+          image={EnginePreview}
+          ref="https://github.com/kotivas/engine"
+          featured={false}
+          tags={["C++", "OpenGL", "Experiment"]}
+        />
+
+        <ProjectCard
+          title="Cnake"
+          description="Classic snake game for learning modern C++ with SDL2"
+          image={CnakePreview}
+          ref="https://github.com/kotivas/cnake"
+          featured={false}
+          tags={["C++", "SDL2", "First one"]}
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .projects {
+    padding: 4rem 0;
+  }
+
+  .projects-container {
+    max-width: 1350px;
+    margin-inline: auto;
+    padding: 4rem;
+  }
+
+  .projects-title {
+    display: block;
+    font-size: clamp(3rem, 5vw, 4rem);
+    font-weight: 500;
+    color: var(--color-primary);
+    margin-bottom: 2.5rem;
+  }
+
+  .projects-scroll-container {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    padding-bottom: 1.5rem;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.25) transparent;
+  }
+
+  @media (max-width: 700px) {
+    .projects-container {
+      margin: 1rem;
+      padding: 2rem 1.5rem;
+    }
+  }
+</style>
