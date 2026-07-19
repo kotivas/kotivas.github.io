@@ -49,7 +49,7 @@ import ProjectCard from "../ProjectCard.astro";
   .projects-container {
     max-width: 1350px;
     margin-inline: auto;
-    padding: 4rem;
+    padding: clamp(1rem, 4vw, 4rem);
   }
 
   .projects-title {
@@ -68,12 +68,5 @@ import ProjectCard from "../ProjectCard.astro";
     scroll-snap-type: x mandatory;
     scrollbar-width: thin;
     scrollbar-color: rgba(255, 255, 255, 0.25) transparent;
-  }
-
-  @media (max-width: 700px) {
-    .projects-container {
-      margin: 1rem;
-      padding: 2rem 1.5rem;
-    }
   }
 </style>

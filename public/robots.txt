@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kotivas.github.io/sitemap-index.xml

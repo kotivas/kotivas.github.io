@@ -1,12 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
-
 :root {
   --color-primary: #f0f0f0;
   --color-muted: #a0a0a0;
   --color-bg: #0f0f0f;
   --color-surface: #151515;
   --color-card: #191919;
-  /* --color-surface-dark: #202020; */
+  --color-surface-dark: #202020;
 
   --color-featured: #b8a46a;
 
@@ -29,7 +27,6 @@ body {
   min-height: 100vh;
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
-  color: var(--color-text);
   background-color: var(--color-bg);
 }
 
@@ -41,7 +38,7 @@ footer {
 .section-card {
   border: 1px solid rgba(255, 255, 255, 0.08);
   background-color: var(--color-surface);
-  padding: 4rem;
+  padding: clamp(1.75rem, 4vw, 4rem);
   border-radius: var(--border-radius);
 }
 

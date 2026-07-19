@@ -26,10 +26,10 @@
         <div class="about-col">
           <p>
             That same curiosity carries into everything else I build. I've
-            written desktop applications with Tauri, including a
-            file-encryption tool with custom encryption sequences and a
-            low-latency group chat system in C++ using Asio. I also do web
-            frontend work, mostly static sites so far.
+            written desktop applications with Tauri, including a file-encryption
+            tool with custom encryption sequences and a low-latency group chat
+            system in C++ using Asio. I also do web frontend work, mostly static
+            sites so far.
           </p>
           <p>
             I started scripting at ten, tinkering with Windows Script Host, then
@@ -56,7 +56,7 @@
   }
 
   .about {
-    padding: 4rem;
+    padding: clamp(1rem, 4vw, 4rem);
     max-width: 1350px;
     margin-inline: auto;
   }
@@ -78,7 +78,7 @@
     gap: 1.5rem;
   }
 
-  @media (max-width: 1024px) {
+  @media (max-width: 900px) {
     .about-text {
       grid-template-columns: 1fr;
     }

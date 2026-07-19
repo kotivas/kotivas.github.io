@@ -1,4 +1,6 @@
 ---
+import { Image } from "astro:assets";
+
 interface Props {
   title: string;
   description: string;
@@ -13,7 +15,7 @@ const { title, description, image, tags, ref, featured } = Astro.props;
 
 <article class="project-card">
   <a class="project-image" href={ref} target="_blank" rel="noopener noreferrer">
-    <img src={image.src} alt={title} />
+    <Image src={image} alt={title} loading="lazy"/>
   </a>
 
   <div class="project-content">
@@ -91,5 +93,32 @@ const { title, description, image, tags, ref, featured } = Astro.props;
   .project-tag-featured {
     color: var(--color-featured);
     border: 1px solid var(--color-featured);
+  }
+
+  @media (max-width: 480px) {
+    .project-card {
+      flex: 0 0 20rem;
+    }
+
+    .project-image {
+      height: 160px;
+    }
+
+    .project-content {
+      padding: 1.1rem;
+    }
+
+    .project-content h2 {
+      margin: 0 0 0.5rem;
+    }
+
+    .project-content p {
+      margin: 0 0 1rem;
+    }
+
+    .project-tag-featured,
+    .project-tags span {
+      padding: 0.3rem 0.6rem;
+    }
   }
 </style>
