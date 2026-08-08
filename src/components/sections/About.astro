@@ -47,8 +47,7 @@
   }
 
   .about-text {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
     gap: 2rem;
     color: var(--color-primary);
   }
@@ -56,28 +55,30 @@
   .about-col {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1rem;
+  }
+
+  .about-text p {
+    line-height: 1.5;
+    font-size: 1.5rem;
+    color: color-mix(in srgb, var(--color-primary) 90%, transparent);
+    margin: 0;
+    max-width: 1028px;
   }
 
   @media (max-width: 900px) {
     .about-text {
       grid-template-columns: 1fr;
     }
+
+    .about-text p {
+      font-size: 1.3rem;
+    }
   }
 
-  .about-text p {
-    line-height: 1.5;
-    font-size: 1.25rem;
-    color: color-mix(in srgb, var(--color-primary) 90%, transparent);
-    margin: 0;
-  }
-
-  .about-text-first {
-    font-size: 1.75rem;
-    font-weight: 600;
-  }
-
+  .about-text-first,
   .about-text-last {
+    font-size: 1.75rem;
     font-weight: 600;
   }
 </style>
