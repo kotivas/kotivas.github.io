@@ -36,7 +36,7 @@ footer {
 }
 
 .section-card {
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  /* border: 1px solid rgba(255, 255, 255, 0.08); */
   background-color: var(--color-surface);
   padding: clamp(1.75rem, 4vw, 4rem);
   border-radius: var(--border-radius);
